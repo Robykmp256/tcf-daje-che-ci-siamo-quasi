@@ -25,7 +25,7 @@ Categorie::Categorie (){
 }
 
 vector <string> Categorie::Elenco() const{
-    cout<<"siamo ad elenco in cat"<<endl;//Ti stampa l'elenco delle maglie
+    //Ti stampa l'elenco delle maglie
     return prodotti;
 }
 
@@ -34,7 +34,7 @@ bool Categorie::Selezione( int s) const{     //Dato il numero associato alla mag
 
         return cat[0]->Selezione(s);   //qua è troppo specifico ma non so come farlo generico
     }
-    if (s > 1 && s <= 2) {
+    if (s > 1 && s <= 3) {
         return cat[1]->Selezione(s - 2);
     }
 
@@ -48,7 +48,7 @@ bool Categorie::Selezione( int s) const{     //Dato il numero associato alla mag
 
          return cat[0]->getprod(s);   //qua è troppo specifico ma non so come farlo generico
      }
-     if (s > 1 && s <= 2) {
+     if (s > 1 && s <= 3) {
          return cat[1]->getprod(s - 2);
      }   //qua è troppo specifico ma non so come farlo generico
           }

@@ -39,8 +39,9 @@ void carrello::stampa(){//la funzione la chiama, ma è prima il problema
 
     }
 }
-void carrello::rimuovi() {
-    int a, b, c;
+int carrello::rimuovi() {
+    int a,b,c,x;
+    x=3;
     c = carr.size();
     cout << "1-conferma" << endl;
     cout << "2-elimina un elemento dal carrello" << endl;
@@ -55,25 +56,36 @@ void carrello::rimuovi() {
         if (c > 1) {
             carr.erase(carr.begin() + (a - 1));
             s=s-prezzi[a-1];
-
+            system("cls");
             stampa();
             cout << "1-conferma ordine" << endl;
             cout << "2-elimina un altro elemento" << endl;
             cin >> b;
             c--;
         } else {
-            if (c = 1) {
-                cout << "Attenzione. Nel carrello è rimasto un unico elemento. Proseguire? " << endl;
+            if (c == 1) {
+                cout << "Attenzione. Nel carrello e' rimasto un unico elemento. Proseguire? " << endl;
                 cout << "1-lascia l'ultimo elemento" << endl;
                 cout << "2-elimina ultimo elemento" << endl;
-                carr.erase(carr.begin() + (a - 1));
-                prezzi.erase(prezzi.begin()+(a-1));
-            } else {
+                if (b == 2){
+                    cin >> b;
+                    a = 1;
+                    carr.erase(carr.begin() + (a - 1));
+                    prezzi.erase(prezzi.begin() + (a - 1));
+                    cout<<"Sicuro di non voler acquistare nulla?"<<endl;
+                    cout<<"1-Non acquistare nulla"<<endl;
+                    cout<<"2-Torna indietro e aggiungi altri elementi"<<endl;
+                    cin>>x;
+                    b=1;
+                }
+            }
+            if(c==0) {
                 cout << "carrello vuoto, non è possibile rimuovere altri elementi" << endl;
             }
         }
 
     }
+    return x;
 }
 int carrello::somma(){
     return s;

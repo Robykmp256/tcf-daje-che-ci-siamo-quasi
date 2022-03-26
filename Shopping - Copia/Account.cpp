@@ -66,15 +66,13 @@ Account::Account(int *UNO, int *GLOBAL, string *AZIONE1, string *AZIONE2) {
                     getline(file, riga);
                     Surname = riga;
 
-
-
                 }
                 getline(file, riga);
             }
         }
         file.close();
     }
-
+    char * Ispedizione[100]={0};
 
 
 }
@@ -94,3 +92,4 @@ string Account::getSurname() const {
 string Account::getEmail() const {
     return Mail;
 }
+

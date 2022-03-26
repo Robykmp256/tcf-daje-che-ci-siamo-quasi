@@ -26,8 +26,7 @@ private:
     string Name;
     string Surname;
     string Mail;
-
-
+    ;
 };
 
 #endif

@@ -1,5 +1,6 @@
-#include <iostream>
+ #include <iostream>
 #include<fstream>
+#include <conio.h>
 
 #include "Accesso.h"
 using namespace std;
@@ -20,7 +21,19 @@ Accesso::Accesso(int *UNO,int *GLOBAL) {
     do {
         cout << "Inserisci la mail e la password, premendo invio" << endl;
         cin >> mail;
-        cin >> password;
+        int j =0;
+        char c;
+        char pw[100]={0};
+        do{
+            pw[j]=getch();
+            if (password[j]!=13){
+                j++;
+            }
+        }while(pw[j-1]!=13);
+        //string a(pw);
+        string a;
+        cin>>a;
+        password = a;
 
         fstream file;
         file.open("Utenti.txt", ios::in);
@@ -43,13 +56,7 @@ Accesso::Accesso(int *UNO,int *GLOBAL) {
                         ispedizione = riga;
                         check = 1;
                         *UNO = i;}
-
-
                 }
-
-
-
-
                 i = i + 1;
             }
         }
@@ -60,6 +67,8 @@ Accesso::Accesso(int *UNO,int *GLOBAL) {
     } while (check == 0);
     *GLOBAL = 1;
     cout << "login effettuato!" << endl;
+    char t;
+    cin>>t;
     system("cls");
 }
 

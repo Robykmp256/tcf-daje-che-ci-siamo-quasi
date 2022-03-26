@@ -10,7 +10,7 @@ public:
     carrello(vector<Oggetto*> &);
 
      void stampa(  );
-    void rimuovi(  );
+    int rimuovi(  );
      int somma( );
      vector<Oggetto*> getcarrello();
 
@@ -18,8 +18,7 @@ private:
 
     vector<int> prezzi;
     vector<Oggetto *> carr;
-    int i=0;
-int s=0;
+    int s=0;
 
 };
 

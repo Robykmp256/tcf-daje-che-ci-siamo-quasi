@@ -11,9 +11,7 @@ class Carta : public Metpagamento {
 
 public:
     Carta();
-
-    virtual void printmail(Account *, int *, vector<Oggetto*> &) const;
-
+    string getData() const;
 private:
     string numerocarta;
     string datascadenza;

@@ -12,7 +12,7 @@ using namespace std;
 
 
 Carta::Carta() {
-    cout << "Inserire numero della carta, data di scadenza(GG/MM/AAAA) e codice, premendo invio" << endl;
+    cout << "Inserire numero della carta, data di scadenza(MM/AA) e codice, premendo invio" << endl;
     cin >> numerocarta;
     cin >> datascadenza;
     cin >> codice;
@@ -30,7 +30,7 @@ Carta::Carta() {
             p = strlen(Ch);
         }
         u++;
-    }while (p<13 or p>16);
+    }while (p<13 || p>16);
 
     char CH[255];
     strcpy_s(CH, datascadenza.c_str());
@@ -63,21 +63,9 @@ Carta::Carta() {
     }while (c != 3);
 
 }
-
-
-void Carta::printmail(Account *account, int *z, vector<Oggetto*> &v4) const {
-    cout << "Gentile " << account->getName() << " " << account->getSurname() << "," << endl;
-    cout << endl;
-    cout << "Tramite questa mail vogliamo confermarle l'ordine dei seguenti articoli:"
-         << endl;   //prova a mandarla davvero, sfrutta getmail!!! da account
-     for ( int i = 0; i < v4.size(); i++) {
-         {
-             v4[i]->stampaog();
-         }
-     }
-    //	cout << v1[i].getname << " " << v1[i].getcolore << " di taglia " << v1[i].gettaglia << endl;}
-
-    cout << "Per un totale di "<<z << "che sara' addebitato sulla carta con data di scadenza " << datascadenza << "." << endl;
-    cout << "Gli articoli saranno spediti all'indirizzo di consegna: "  << endl;
-//la somma il puntatore non funzia
+string Carta::getData() const
+{
+    return datascadenza;
 }
+
+
