@@ -1,3 +1,0 @@
-C:/Users/Utente/Desktop/UNIVERSITA'/3'anno/TCF/tcf3-mainn/Shopping - Copia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Utente/Desktop/UNIVERSITA'/3'anno/TCF/tcf3-mainn/Shopping - Copia/cmake-build-debug/CMakeFiles/Shopping.dir
-C:/Users/Utente/Desktop/UNIVERSITA'/3'anno/TCF/tcf3-mainn/Shopping - Copia/cmake-build-debug/CMakeFiles/edit_cache.dir
